@@ -1,6 +1,6 @@
 {
   "name": "@gld5000k/readline",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Easy to use readline functions for interactive CLI scripts",
   "keywords": [
     "CLI",
