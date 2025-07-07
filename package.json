@@ -1,6 +1,6 @@
 {
-  "name": "@gld/readline",
-  "version": "1.0.0",
+  "name": "@gld5000k/readline",
+  "version": "1.0.1",
   "description": "Easy to use readline functions for interactive CLI scripts",
   "keywords": [
     "CLI",
@@ -20,7 +20,7 @@
   "license": "MIT",
   "author": "GLD5000",
   "type": "commonjs",
-  "main": "src.index.mjs",
+  "main": "src/index.mjs",
   "scripts": {
     "test": "test"
   }

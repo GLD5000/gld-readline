@@ -2,10 +2,12 @@
 import * as readline from "node:readline/promises";
 
 /**
- *
+ * Gives the user a selection of lines/answers to choose from in the terminal
+ * then returns their selected line as a string
  * @param {string[]} lines
  * @param {number} defaultNumber
- * @returns
+ * @param {string} title
+ * @returns {Promise<string>}
  */
 export async function selectLineFromStringArray(
   lines,
