@@ -1,2 +1,5 @@
-import { selectLineFromText } from "./src/utils/selectLineFromText.mjs";
-export { selectLineFromText };
+import {
+  selectLineFromStringArray,
+  answerStringQuestion,
+} from "./utils/readlineFunctions.mjs";
+export { selectLineFromStringArray, answerStringQuestion };

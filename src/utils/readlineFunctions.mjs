@@ -7,7 +7,7 @@ import * as readline from "node:readline/promises";
  * @param {number} defaultNumber
  * @returns
  */
-export async function selectLineFromText(
+export async function selectLineFromStringArray(
   lines,
   defaultNumber = 1,
   title = "Select a line:"
@@ -42,9 +42,9 @@ function logMultilineOptions(title, lines) {
 /**
  * Asks a given question in the terminal and returns the string response
  * @param {string} question
- * @returns {string}
+ * @returns {Promise<string>}
  */
-export async function useReadlineString(question) {
+export async function answerStringQuestion(question) {
     const rl = getReadLine();
   try {
     const answer = await rl.question(question);
