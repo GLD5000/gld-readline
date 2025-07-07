@@ -1,6 +1,6 @@
 # [gld-readline](https://www.npmjs.com/package/@gld5000k/readline)
 
-Easy to use readline functions for interactive CLI node.js scripts
+Easy to use readline functions for interactive CLI Node.js scripts
 
 ## Example usage
 
