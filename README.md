@@ -1,4 +1,4 @@
-# [gld-readline](https://www.npmjs.com/package/@gld5000k/readline)
+# [gld-readline](https://www.npmjs.com/package/@gld5000-cli/readline)
 
 Easy to use readline functions for interactive CLI Node.js scripts
 
@@ -7,13 +7,13 @@ Easy to use readline functions for interactive CLI Node.js scripts
 ### Install
 
 ```
-npm i -D @gld5000k/readline
+npm i -D @gld5000-cli/readline
 ```
 
 ### Import (.mjs)
 
 ```
-import { selectLineFromStringArray, answerStringQuestion } from '@gld5000k/readline';
+import { selectLineFromStringArray, answerStringQuestion } from '@gld5000-cli/readline';
 ```
 
 ### Select a line from a string array
