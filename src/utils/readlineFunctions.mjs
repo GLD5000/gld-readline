@@ -14,7 +14,7 @@ export async function selectLineFromStringArray(
   defaultNumber = 1,
   title = "Select a line:"
 ) {
-    const rl = getReadLine();
+  const rl = getReadLine();
   try {
     logMultilineOptions(title, lines);
     const question =
@@ -42,26 +42,33 @@ function logMultilineOptions(title, lines) {
   });
 }
 /**
- * Asks a given question in the terminal and returns the string response
+ * Asks a given question in the terminal (with an optional default for empty user input) and returns the string response
  * @param {string} question
+ * @param {string | undefined} defaultValue
  * @returns {Promise<string>}
  */
-export async function answerStringQuestion(question) {
-    const rl = getReadLine();
+export async function answerStringQuestion(question, defaultValue) {
+  const rl = getReadLine();
   try {
-    const answer = await rl.question(question);
-    if (!answer.trim()) {
+    const answer = defaultValue
+      ? await rl.question(`${question} (${defaultValue}): `)
+      : await rl.question(`${question}: `);
+    const answerIsBlank = !answer.trim();
+    if (answerIsBlank && !defaultValue) {
       const err = new Error("Please enter a value");
       console.error("Input should not be blank.", err);
       return err;
+    } else if (answerIsBlank && defaultValue) {
+      return defaultValue;
+    } else {
+      return answer;
     }
-    return answer;
   } catch (error) {
     return JSON.stringify(error);
   } finally {
     rl.close();
   }
-} 
+}
 /**
  * Gets readline interface
  * @returns {function}

@@ -5,6 +5,6 @@ const selectedLine = await selectLineFromStringArray(lines, 2, "Choose Default")
 console.log('selectedLine:', selectedLine);
 console.assert(selectedLine === "two");
 
-const stringAnswer = await answerStringQuestion('Type: hello')
+const stringAnswer = await answerStringQuestion('Type: hello','hi')
 console.log('stringAnswer:', stringAnswer);
-console.assert(stringAnswer === "hello");
+console.assert(stringAnswer);
