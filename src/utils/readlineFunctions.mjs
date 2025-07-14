@@ -19,7 +19,7 @@ export async function selectLineFromStringArray(
     logMultilineOptions(title, lines);
     const question =
       "\n" +
-      `Enter line number to select (default is ${lines[defaultNumber - 1]}): `;
+      `Enter line number to select: (${defaultNumber}. ${lines[defaultNumber - 1]}) `;
     const answer = await rl.question(question);
     const lineNumber = parseInt(answer);
     const shouldUseDefault =
@@ -51,7 +51,7 @@ export async function answerStringQuestion(question, defaultValue) {
   const rl = getReadLine();
   try {
     const answer = defaultValue
-      ? await rl.question(`${question} (${defaultValue}): `)
+      ? await rl.question(`${question}: (${defaultValue}) `)
       : await rl.question(`${question}: `);
     const answerIsBlank = !answer.trim();
     if (answerIsBlank && !defaultValue) {
